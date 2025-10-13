@@ -1,0 +1,39 @@
+---
+title: "Summary"
+author: "gxy"
+date: "2025-10-12"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Project introduction
+
+This R markdown file mainly provides a general description of the specific variation prediction model for Genetic Skeletal Diseases (GSD). GSD refer to a group of genetic diseases that cause disorders in the growth,development,differentiation and reconstruction of bones,cartilage and joints due to changes in genetic material, and it has genetic heterogeneity. While existing genome-wide tools learn from large-scale data over the entire genome, they might also compromise the prediction accuracy for specific sets of genes and diseases7 in some ways.This project mainly focuses on constructing variant prediction models for GSD to enhance the accuracy of prediction.
+
+```{r cars}
+summary(cars)
+```
+
+## Enviroment
+
+R-4.5.1
+RStudio-2025.09
+Python-3.13.7
+Pycharm-2025.2.1.1
+VMware-workstation-full-17.6.3
+utuntu-24.04.3-desktop-amd64
+
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Task Progress
+2025-09-25:ClinVar raw data collection
+2025-10-13:Raw data annotation
