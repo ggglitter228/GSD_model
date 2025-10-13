@@ -1,0 +1,27 @@
+---
+title: "Analysis Progress"
+author: "gxy"
+date: "2025-10-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Raw data collection
+
+分别下载GRCh37和GRCh38版本的ClinVar原始数据，在其中筛选SNV、明确P/LP/B/LB、两星及两星以上的和与GSD相关基因相匹配的变异。
+利用正则表达式将INFO中相关的信息比如：ALLELEID,CLNDISDB,CLNDN,CLNHGVS,CLNREVSTAT,CLNSIG,CLNVC提取出来。根据我们想要的条件将符合的变异条目筛选出来。
+将INFO中的GSD表型相关的OMIM编号分离提取出来，与基因-表型对应表格相匹配，将匹配的变异筛选出来。最终去除重复行。
+
+根据SO序列号将每个变异的变异类型提取出来，提取出两列变异类型。统计不同变异类型的数量，并绘制统计图。
+
+
+```{r cars}
+summary(cars)
+```
+
+## Annotation
+
+安装虚拟机系统，配置相关环境，在linux中安装Annovar工具，下载dbNSFP数据库，Annovar中最新的版本是4.7a，经过与dbNSFP最新版本5.3a数据库对比，其中MutationTaster,MutPred,ALFA不是最新版本。其中每个数据库的版本见data_manifest。具体命令行见Scripts。
