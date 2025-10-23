@@ -1,0 +1,44 @@
+---
+title: "weekly-journal-2025-09"
+author: "gxy"
+date: "2025-10-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## ClinVar data download
+
+vcfR包用于读取VCF格式文件
+mutate()添加新列或修改现有列
+str_match()，用于从字符串中提取正则表达式匹配的捕获组，返回一个字符矩阵，其中包括匹配的完整字符串和各个捕获组的内容。
+coalesce()，用于从多个向量中选取第一个非缺失值。
+正则表达式：\\d 匹配任何数字[0-9];\\w 匹配任何字母、数字或下划线; . 匹配任何字符(除了换行符); + 匹配前面元素一次或多次； ? 匹配前面的元素零次或一次(使匹配变为非贪婪匹配)
+
+```{r cars}
+summary(cars)
+```
+
+## ClinVar data Cleaning
+
+subset()从某个数据框中筛选出固定条件下行列。
+分离出变异的genename以及geneid。分离出OMIM编号。
+readxl：读取excel表格。
+seperate_rows()将一列中多个内容根据某个符号分理出多行。
+~purrr公式语法(匿名函数简写)~expression(.x)等价于 function(.x){expression(.x)}
+str_remove()一戳匹配部分；paste(..., sep = "", collapse = NULL), ...是一个或多个要链接的对象，sep连接多个向量是使用的分隔符，collapse连接向量内多个元素时使用的分隔符。
+distinct()去除重复行。inner_join()内连接，只保留两个数据集中都存在的行。
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Other
+Configure the machine and the Python Platform
+Install Annovar and VEP tools
+Create GitHub account
